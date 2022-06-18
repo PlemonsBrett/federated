@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node bin/federated-appsync-api.ts"
+}

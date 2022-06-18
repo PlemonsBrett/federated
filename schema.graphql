@@ -1,0 +1,35 @@
+type Product {
+  id: ID!
+  sku: String
+  package: String
+  variation: ProductVariation
+  dimensions: ProductDimension
+  createdBy: User
+}
+
+type ProductDimension {
+  size: String
+  weight: Float
+}
+
+type ProductVariation {
+  id: ID!
+}
+
+input ProductVariationInput {
+  id: ID!
+}
+
+type User {
+  email: ID!
+  totalProductsCreated: Int
+}
+
+type _Service {
+  sdl: String
+}
+
+type Query {
+  _service: _Service!
+  product(id: ID!): Product
+}
